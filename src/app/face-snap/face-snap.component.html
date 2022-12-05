@@ -3,7 +3,7 @@
         <h2>{{ title }}</h2>
         <p>{{ description }}</p>
         <p>Online the : {{ createDate }}</p>
-        <button>{{ snaps }}</button>
+        <button (click)="onClickSnaps()">Count : {{ snaps }}</button>
         <img class="imgCity" [src]="imgUrl" alt="Paris">
     </div>
 </div>

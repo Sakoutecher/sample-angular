@@ -13,6 +13,14 @@ export class FaceSnapComponent implements OnInit {
   snaps!: number
   imgUrl!: string
 
+  onClickSnaps = ():void => {
+    if (this.snaps === 0) {
+      this.snaps++
+    } else {
+      this.snaps--
+    }
+  }
+
   ngOnInit(): void {
     this.title = "Paris"
     this.description = "Visiter Paris !"
