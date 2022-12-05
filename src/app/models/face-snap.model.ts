@@ -3,5 +3,5 @@ export class FaceSnapModel {
     description!: string
     createDate!: Date
     imgUrl!: string
-    location!: string
+    location?: string
 }
