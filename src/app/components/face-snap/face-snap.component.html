@@ -1,9 +1,10 @@
 <div class="container">
     <div class="city-container">
-        <h2>{{ title }}</h2>
-        <p>{{ description }}</p>
-        <p>Online the : {{ createDate }}</p>
+        <h2>{{ facesnapChild.title }}</h2>
+        <p>{{ facesnapChild.description }}</p>
+        <p>Online the : {{ facesnapChild.createDate }}</p>
         <button (click)="onClickSnaps()">Count : {{ snaps }}</button>
-        <img class="imgCity" [src]="imgUrl" alt="Paris">
+        <img class="imgCity" [src]="facesnapChild.imgUrl" alt="Paris">
+        <p *ngIf="facesnapChild.location">Picture taken from : {{ facesnapChild.location }}</p>
     </div>
 </div>
