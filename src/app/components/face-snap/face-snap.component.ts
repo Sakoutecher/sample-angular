@@ -15,7 +15,7 @@ export class FaceSnapComponent implements OnInit {
   colorDesc!: string
   
   onClickSnaps = ():void => {
-    this.snaps++    
+    this.snaps === 0 ? this.snaps = 1 : this.snaps = 0   
   }
 
   ngOnInit(): void {
