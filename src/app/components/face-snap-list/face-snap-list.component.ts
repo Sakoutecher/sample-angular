@@ -12,6 +12,6 @@ export class FaceSnapListComponent {
 
   constructor(private faceSnapService: FaceSnapService) {}
   ngOnInit(): void {
-    this.facesnap = this.faceSnapService.getFacesnap()
+    this.facesnap = this.faceSnapService.getAllFacesnap()
   }
 }
