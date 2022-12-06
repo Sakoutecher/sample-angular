@@ -8,6 +8,8 @@ import { registerLocaleData } from '@angular/common'
 import * as fr from '@angular/common/locales/fr';
 import { FaceSnapListComponent } from './components/face-snap-list/face-snap-list.component';
 import { HeaderComponent } from './components/header/header.component'
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { HeaderComponent } from './components/header/header.component'
     FaceSnapComponent,
     ChangeColorDirective,
     FaceSnapListComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
     {
@@ -28,6 +32,7 @@ import { HeaderComponent } from './components/header/header.component'
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { 
   constructor() {
     registerLocaleData(fr.default)
