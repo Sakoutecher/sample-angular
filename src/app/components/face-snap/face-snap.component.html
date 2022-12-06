@@ -1,7 +1,7 @@
 <div *ngIf="facesnapChild.location" class="face-snap-card" [ngClass]="snaps > 0 ? 'snapped' : ''">
     <h2>{{ facesnapChild.title }}</h2>
     <p [ngStyle]="{color: colorDesc}">{{ facesnapChild.description }}</p>
-    <p>Online the : {{ facesnapChild.createDate }}</p>
+    <p appChangeColor>Online at : {{ facesnapChild.createDate | date: 'HH:mm, d MMMM yyyy' }}</p>
     <button [ngStyle]="{color: 'rgb(0, ' + snaps + ', 0)'}" (click)="onClickSnaps()">Count : {{ snaps }}</button>
     <img class="imgCity" [src]="facesnapChild.imgUrl" alt="Paris">
     <p>Picture taken from : {{ facesnapChild.location }}</p>
