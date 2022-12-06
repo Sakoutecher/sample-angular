@@ -1,0 +1,28 @@
+
+=================== Html ===================
+
+<div class="landing-block">
+  <img src="assets/snapface.png" alt="Snapface logo">
+  <br/><br/>
+  <div class="landing-links">
+    <a>Continuer vers Snapface</a>
+  </div>
+</div>
+
+
+
+
+
+=================== Css ===================
+
+.landing-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.landing-links {
+  width: 100%;
+  text-align: center;
+}

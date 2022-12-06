@@ -12,16 +12,14 @@ export class FaceSnapComponent implements OnInit {
   @Input()
   facesnapChild!: FaceSnapModel
   snaps!: number
+  colorDesc!: string
   
   onClickSnaps = ():void => {
-    if (this.snaps === 0) {
-      this.snaps++
-    } else {
-      this.snaps--
-    }
+    this.snaps++    
   }
 
   ngOnInit(): void {
     this.snaps = 0
+    this.colorDesc = 'salmon'
   }
 }

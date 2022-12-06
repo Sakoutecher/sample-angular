@@ -1,10 +1,9 @@
-<div *ngIf="facesnapChild.location" class="container">
-    <div class="city-container">
-        <h2>{{ facesnapChild.title }}</h2>
-        <p>{{ facesnapChild.description }}</p>
-        <p>Online the : {{ facesnapChild.createDate }}</p>
-        <button (click)="onClickSnaps()">Count : {{ snaps }}</button>
-        <img class="imgCity" [src]="facesnapChild.imgUrl" alt="Paris">
-        <p *ngIf="facesnapChild.location">Picture taken from : {{ facesnapChild.location }}</p>
-    </div>
+<div *ngIf="facesnapChild.location" class="face-snap-card">
+    <h2>{{ facesnapChild.title }}</h2>
+    <p [ngStyle]="{color: colorDesc}">{{ facesnapChild.description }}</p>
+    <p>Online the : {{ facesnapChild.createDate }}</p>
+    <button [ngStyle]="{color: 'rgb(0, ' + snaps + ', 0)'}" (click)="onClickSnaps()">Count : {{ snaps }}</button>
+    <img class="imgCity" [src]="facesnapChild.imgUrl" alt="Paris">
+    <p>Picture taken from : {{ facesnapChild.location }}</p>
 </div>
+
