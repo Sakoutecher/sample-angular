@@ -1,0 +1,9 @@
+<div *ngIf="facesnapChild.location" class="face-snap-card" [ngClass]="facesnapChild.snaps > 0 ? 'snapped' : ''">
+    <h2>{{ facesnapChild.title }}</h2>
+    <p [ngStyle]="{color: colorDesc}">{{ facesnapChild.description }}</p>
+    <p appChangeColor>Online at : {{ facesnapChild.createDate | date: 'HH:mm, d MMMM yyyy' }}</p>
+    <button [ngStyle]="{color: 'rgb(0, ' + facesnapChild.snaps + ', 0)'}" (click)="onClickSnaps()">{{ buttonText }} {{ facesnapChild.snaps }}</button>
+    <img class="imgCity" [src]="facesnapChild.imgUrl" alt="Paris">
+    <p>Picture taken from : {{ facesnapChild.location }}</p>
+</div>
+

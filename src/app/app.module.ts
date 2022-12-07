@@ -10,6 +10,7 @@ import { FaceSnapListComponent } from './components/face-snap-list/face-snap-lis
 import { HeaderComponent } from './components/header/header.component'
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
+import { FaceSnapDetailsComponent } from './components/face-snap-details/face-snap-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './components/home/home.component';
     ChangeColorDirective,
     FaceSnapListComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    FaceSnapDetailsComponent
   ],
   imports: [
     BrowserModule,

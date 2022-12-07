@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FaceSnapModel } from 'src/app/models/face-snap.model';
 import { FaceSnapService } from 'src/app/services/face-snap.service';
 
@@ -13,24 +14,15 @@ export class FaceSnapComponent implements OnInit {
   @Input()
   facesnapChild!: FaceSnapModel
   colorDesc!: string
-  buttonText!: string
 
-  constructor(private faceSnapService: FaceSnapService) {
+  constructor(private faceSnapService: FaceSnapService, private router: Router) {}
 
+  onContinue() {
+    const snapId = this.facesnapChild.id
+    this.router.navigateByUrl('facesnaps/' + snapId)
   }
   
-  onClickSnaps = ():void => {
-    if (this.buttonText === 'zeroSnap') {
-      this.buttonText = 'oneSnap'
-      this.faceSnapService.addOrdownFaceSnapById(this.facesnapChild.id)
-    } else {
-      this.buttonText = 'zeroSnap'
-      this.faceSnapService.addOrdownFaceSnapById(this.facesnapChild.id)
-    }  
-  }
-
   ngOnInit(): void {
     this.colorDesc = 'salmon'
-    this.buttonText = 'zeroSnap'
   }
 }
